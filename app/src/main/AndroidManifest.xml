@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projectmanager">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_briefcase"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_briefcase"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectManager">
+        <activity
+            android:name=".View.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".View.ListViewActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".View.ProjectDetailActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".View.CustomerDetailActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".View.TaskActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <service
+            android:name=".StopClockService"
+            android:screenOrientation="portrait"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".View.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

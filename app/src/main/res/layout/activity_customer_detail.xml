@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.CustomerDetailActivity">
+
+    <TextView
+        android:id="@+id/txtvCustomerDetailEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:gravity="center|left"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgbtnEmail"
+        app:layout_constraintEnd_toEndOf="@+id/txtvCustomerDetailPhone"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnEmail"
+        app:layout_constraintTop_toTopOf="@+id/imgbtnEmail" />
+
+    <TextView
+        android:id="@+id/txtvCustomerDetailName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:layout_marginEnd="@dimen/dim_margin_default"
+        android:gravity="center|left"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvIconName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgvIconName"
+        app:layout_constraintTop_toTopOf="@+id/imgvIconName" />
+
+    <TextView
+        android:id="@+id/txtvCustomerDetailAddress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:gravity="center|left"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvIconAddress"
+        app:layout_constraintEnd_toEndOf="@+id/txtvCustomerDetailName"
+        app:layout_constraintStart_toEndOf="@+id/imgvIconAddress"
+        app:layout_constraintTop_toTopOf="@+id/imgvIconAddress" />
+
+    <TextView
+        android:id="@+id/txtvCustomerDetailContact"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:gravity="center|left"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgcIconContact"
+        app:layout_constraintEnd_toEndOf="@+id/txtvCustomerDetailAddress"
+        app:layout_constraintStart_toEndOf="@+id/imgcIconContact"
+        app:layout_constraintTop_toTopOf="@+id/imgcIconContact" />
+
+    <TextView
+        android:id="@+id/txtvCustomerDetailPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:gravity="center|left"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgbtnPhone"
+        app:layout_constraintEnd_toEndOf="@+id/txtvCustomerDetailContact"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnPhone"
+        app:layout_constraintTop_toTopOf="@+id/imgbtnPhone" />
+
+    <ImageButton
+        android:id="@+id/imgbtnEmail"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginTop="@dimen/dim_margin_separate"
+        android:background="@color/white"
+        android:src="@drawable/icon_mail"
+        app:layout_constraintStart_toStartOf="@+id/imgbtnPhone"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnPhone" />
+
+    <ImageView
+        android:id="@+id/imgvIconName"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:layout_marginTop="@dimen/dim_margin_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_building" />
+
+    <ImageView
+        android:id="@+id/imgvIconAddress"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginTop="@dimen/dim_margin_separate"
+        app:layout_constraintStart_toStartOf="@+id/imgvIconName"
+        app:layout_constraintTop_toBottomOf="@+id/imgvIconName"
+        app:srcCompat="@drawable/icon_location" />
+
+    <ImageView
+        android:id="@+id/imgcIconContact"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginTop="@dimen/dim_margin_separate"
+        app:layout_constraintStart_toStartOf="@+id/imgvIconAddress"
+        app:layout_constraintTop_toBottomOf="@+id/imgvIconAddress"
+        app:srcCompat="@drawable/icon_customer" />
+
+    <ImageButton
+        android:id="@+id/imgbtnPhone"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginTop="@dimen/dim_margin_separate"
+        android:background="@color/white"
+        android:src="@drawable/icon_phone"
+        app:layout_constraintStart_toStartOf="@+id/imgcIconContact"
+        app:layout_constraintTop_toBottomOf="@+id/imgcIconContact" />
+
+    <ImageButton
+        android:id="@+id/btnShowProjects"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_rocket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnEmail" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:text="@string/projectOverview"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnShowProjects"
+        app:layout_constraintEnd_toEndOf="@+id/txtvCustomerDetailEmail"
+        app:layout_constraintStart_toEndOf="@+id/btnShowProjects"
+        app:layout_constraintTop_toTopOf="@+id/btnShowProjects" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

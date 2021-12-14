@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/text_customer"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgbtnCustomers"
+        app:layout_constraintEnd_toEndOf="@+id/imgbtnCustomers"
+        app:layout_constraintStart_toStartOf="@+id/imgbtnCustomers" />
+
+    <ImageButton
+        android:id="@+id/imgbtnCustomers"
+        android:layout_width="@dimen/ivDetailWidthLarge"
+        android:layout_height="@dimen/ivDetailHeightLarge"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgbtnProjects"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_customers_many" />
+
+    <ImageButton
+        android:id="@+id/imgbtnProjects"
+        android:layout_width="@dimen/ivDetailWidthLarge"
+        android:layout_height="@dimen/ivDetailHeightLarge"
+        app:layout_constraintBottom_toBottomOf="@+id/imgbtnCustomers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnCustomers"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/icon_rocket" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/text_projects"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgbtnProjects"
+        app:layout_constraintEnd_toEndOf="@+id/imgbtnProjects"
+        app:layout_constraintStart_toStartOf="@+id/imgbtnProjects" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

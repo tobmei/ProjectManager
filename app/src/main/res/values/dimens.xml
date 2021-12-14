@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dim_margin_default">20dp</dimen>
+    <dimen name="dim_margin_top">40dp</dimen>
+    <dimen name="dim_margin_separate">15dp</dimen>
+    <dimen name="txtDialog_height">50dp</dimen>
+    <dimen name="ivDetailHeight">64dp</dimen>
+    <dimen name="ivDetailWidth">64dp</dimen>
+    <dimen name="ivDetailWidthSmall">32dp</dimen>
+    <dimen name="ivDetailHeightSmall">32dp</dimen>
+    <dimen name="ivDetailWidthLarge">128dp</dimen>
+    <dimen name="ivDetailHeightLarge">128dp</dimen>
+    <dimen name="dim_margin_bottom">40dp</dimen>
+</resources>

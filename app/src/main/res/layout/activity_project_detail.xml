@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ProjectDetailActivity">
+
+    <TextView
+        android:id="@+id/txtvProjectDetailName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_margin_separate"
+        android:layout_marginEnd="@dimen/dim_margin_default"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProjectDetailName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProjectDetailName"
+        app:layout_constraintTop_toTopOf="@+id/ivProjectDetailName" />
+
+    <ImageView
+        android:id="@+id/ivProjectDetailName"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:layout_marginTop="@dimen/dim_margin_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_rocket" />
+
+    <TextView
+        android:id="@+id/txtvProjectDetailCustomer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProjectDetailCustomer"
+        app:layout_constraintEnd_toEndOf="@+id/txtvProjectDetailName"
+        app:layout_constraintStart_toEndOf="@+id/ivProjectDetailCustomer"
+        app:layout_constraintTop_toTopOf="@+id/ivProjectDetailCustomer" />
+
+    <TextView
+        android:id="@+id/txtvProjectDetailCreateDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/icCreateDate"
+        app:layout_constraintEnd_toEndOf="@+id/txtvProjectDetailCustomer"
+        app:layout_constraintStart_toEndOf="@+id/icCreateDate"
+        app:layout_constraintTop_toTopOf="@+id/icCreateDate" />
+
+    <ImageView
+        android:id="@+id/ivProjectDetailCustomer"
+        android:layout_width="@dimen/ivDetailWidthSmall"
+        android:layout_height="@dimen/ivDetailHeightSmall"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/ivProjectDetailName"
+        app:layout_constraintTop_toBottomOf="@+id/ivProjectDetailName"
+        app:srcCompat="@drawable/icon_building" />
+
+    <ImageView
+        android:id="@+id/icCreateDate"
+        android:layout_width="@dimen/ivDetailWidthSmall"
+        android:layout_height="@dimen/ivDetailHeightSmall"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/ivProjectDetailCustomer"
+        app:layout_constraintTop_toBottomOf="@+id/ivProjectDetailCustomer"
+        app:srcCompat="@drawable/icon_calendar_add" />
+
+    <ImageView
+        android:id="@+id/ivTimeWorked"
+        android:layout_width="@dimen/ivDetailWidthSmall"
+        android:layout_height="@dimen/ivDetailHeightSmall"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/icCreateDate"
+        app:layout_constraintTop_toBottomOf="@+id/icCreateDate"
+        app:srcCompat="@drawable/icon_timer" />
+
+    <TextView
+        android:id="@+id/txtvTimeWorked"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:hint="@string/txtTimerHint"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTimeWorked"
+        app:layout_constraintEnd_toEndOf="@+id/txtvProjectDetailCreateDate"
+        app:layout_constraintStart_toEndOf="@+id/ivTimeWorked"
+        app:layout_constraintTop_toTopOf="@+id/ivTimeWorked" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#F4F4F4"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNewTask">
+
+        <TextView
+            android:id="@+id/txtvProjectDetailDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnNewTask"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginStart="@dimen/dim_margin_default"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_timer_plus_black"
+        app:layout_constraintEnd_toStartOf="@+id/btnShowTasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTimeWorked" />
+
+    <ImageButton
+        android:id="@+id/btnShowTasks"
+        android:layout_width="@dimen/ivDetailWidth"
+        android:layout_height="@dimen/ivDetailHeight"
+        android:layout_marginEnd="@dimen/dim_margin_default"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_timer_list_black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNewTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnNewTask"
+        app:layout_constraintTop_toTopOf="@+id/btnNewTask" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/projectDescription"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

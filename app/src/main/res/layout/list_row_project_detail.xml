@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtvProjectAllName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/ivDetailWidthSmall"
+        android:layout_height="@dimen/ivDetailWidthSmall"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvProjectDetailAllCustomer"
+        app:layout_constraintEnd_toStartOf="@+id/txtvProjectAllCreateDate"
+        app:layout_constraintStart_toEndOf="@+id/txtvProjectDetailAllCustomer"
+        app:layout_constraintTop_toTopOf="@+id/txtvProjectDetailAllCustomer"
+        app:srcCompat="@drawable/icon_calendar_add" />
+
+    <TextView
+        android:id="@+id/txtvProjectAllCreateDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/txtvProjectAllName"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/ivDetailWidthSmall"
+        android:layout_height="@dimen/ivDetailHeightSmall"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txtvProjectAllName"
+        app:layout_constraintTop_toBottomOf="@+id/txtvProjectAllName"
+        app:srcCompat="@drawable/icon_building" />
+
+    <TextView
+        android:id="@+id/txtvProjectDetailAllCustomer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
