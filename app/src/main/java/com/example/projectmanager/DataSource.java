@@ -17,7 +17,6 @@ public class DataSource {
 
     private static final String LOG_TAG = DataSource.class.getSimpleName();
 
-    //Variablendeklaration
     private DBHelper dbHelper;
     private SQLiteDatabase database;
 
@@ -48,7 +47,7 @@ public class DataSource {
     };
 
     public DataSource(Context context) {
-        Log.d(LOG_TAG, "Unsere DataSource erzeugt jetzt den dbHelper");
+        Log.d(LOG_TAG, "DataSource erzeugt dbHelper");
         dbHelper = new DBHelper(context);
     }
 

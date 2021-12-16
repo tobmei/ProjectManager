@@ -141,7 +141,10 @@ public class ListViewActivityListener implements AdapterView.OnItemClickListener
                         break;
                     case "project_all":
                     case "project_customer":
-                        addProjectDialog();
+                        if(dataSource.getAllCustomers().isEmpty())
+                            Toast.makeText(listViewActivity, "Sie müssen zuerst einen Kunden anlegen", Toast.LENGTH_SHORT).show();
+                        else
+                            addProjectDialog();
                         break;
                     case "task_project":
                         break;
@@ -152,6 +155,10 @@ public class ListViewActivityListener implements AdapterView.OnItemClickListener
                 break;
             case android.R.id.home:
                 listViewActivity.finish();
+                break;
+            case R.id.omDummies:
+                createDummyEntries(2);
+                initListView();
                 break;
         }
         return true;
@@ -169,7 +176,8 @@ public class ListViewActivityListener implements AdapterView.OnItemClickListener
                         selectedCustomer = customerList.get(info.position);
                         customerDeleteConfirmationDialog(selectedCustomer);
                         break;
-                    case "project":
+                    case "project_all":
+                    case "project_customer":
                         selectedProject = projectList.get(info.position);
                         projectDeleteConfirmationDialog(selectedProject);
                         break;
@@ -293,7 +301,7 @@ public class ListViewActivityListener implements AdapterView.OnItemClickListener
                         String customerEmail = etEmail.getText().toString();
                         if(customerName.isEmpty() || customerEmail.isEmpty() ||
                                 customerAddress.isEmpty() || customerContact.isEmpty() || customerPhone.isEmpty())
-                            Toast.makeText( listViewActivity, "Bitte alles ausfüllen", Toast.LENGTH_SHORT);
+                            Toast.makeText( listViewActivity, "Bitte alles ausfüllen", Toast.LENGTH_SHORT).show();
                         else {
 
                             Customer customer = new Customer(customerName, customerAddress, customerEmail, customerPhone, customerContact);
@@ -366,7 +374,7 @@ public class ListViewActivityListener implements AdapterView.OnItemClickListener
                         int customerID = ((Customer)ddCustomer.getSelectedItem()).getDbID();
                         String description = etDescription.getText().toString();
                         if(description.isEmpty())
-                            Toast.makeText( listViewActivity, "Bitte alles ausfüllen", Toast.LENGTH_SHORT);
+                            Toast.makeText( listViewActivity, "Bitte alles ausfüllen", Toast.LENGTH_SHORT).show();
                         else {
                             Project project = new Project(name, customerID, description, Utility.getCurrentTime(), false);
                             projectList.add(0, dataSource.insertProject(project));
@@ -437,6 +445,8 @@ public class ListViewActivityListener implements AdapterView.OnItemClickListener
         listViewActivity.getMenuInflater().inflate(R.menu.optionsmenu, menu);
         if(mode.equals("task_project"))
             menu.findItem(R.id.omNew).setVisible(false);
+        if(!mode.equals("customer"))
+            menu.findItem(R.id.omDummies).setVisible(false);
         return true;
     }
 

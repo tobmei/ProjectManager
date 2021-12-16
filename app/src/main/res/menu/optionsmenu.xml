@@ -11,4 +11,7 @@
         android:id="@+id/omNew"
         android:icon="@drawable/icon_plus_black"
         android:title="@string/omNew" />
+    <item
+        android:id="@+id/omDummies"
+        android:title="Erstelle Testkunden" />
 </menu>
